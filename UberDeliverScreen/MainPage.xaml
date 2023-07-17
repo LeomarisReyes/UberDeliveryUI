@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="UberDeliverScreen.MainPage">
+
+    <!-- Main layout-->
+    <Grid RowDefinitions="Auto,Auto,*,Auto,Auto,Auto,*,Auto"
+          ColumnDefinitions="Auto,*,Auto"
+          Padding="15,0"
+          RowSpacing="7">
+
+        <!-- Food image-->
+        <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"
+               Source="food"
+               Margin="-15,-60,-15,15"
+               BackgroundColor="#fda400"
+               HeightRequest="430"
+               VerticalOptions="Start"
+               Aspect="AspectFit"/>
+
+        <!-- Close Button--> 
+        <Button Grid.Row="0" Grid.Column="0"  
+                HeightRequest="56"
+                WidthRequest="56"
+                CornerRadius="28"
+                ImageSource="close"
+                BackgroundColor="#fffeff"
+                VerticalOptions="Start" />
+
+        <!-- Help Button-->
+        <Button Grid.Row="0" Grid.Column="2"
+                HeightRequest="45"
+                WidthRequest="90"
+                CornerRadius="24"
+                Text="Ayuda"
+                FontSize="16"
+                TextColor="#141414"
+                BackgroundColor="#fffeff"
+                VerticalOptions="Start"/>
+
+        <!-- Delivery title and description-->
+        <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+               Text="Justo a tiempo"
+               FontAttributes="Bold"
+               FontSize="25"/>
+
+        <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3"
+               Text="Jose y Wendy's - Supermarket JJ entregaron el pedido a tiempo. Tomate un minutos para calificar y dar las&#10;gracias."
+               TextColor="#525252"
+               Padding="0,0,0,35"
+               LineBreakMode="CharacterWrap"/>
+
+        <!--Deliver information-->
+
+        <!-- Profile image-->
+        <toolkit:AvatarView Grid.Row="3" Grid.Column="0" Grid.RowSpan="3"
+                    ImageSource="jose"
+                    Margin="0,0,15,0"
+                    HeightRequest="50"
+                    WidthRequest="50"
+                    CornerRadius="25"/> 
+        <!-- Delivery instructions-->
+        <Label Grid.Row="3" Grid.Column="1" FontSize="15" FontAttributes="Bold" Text="Entregado por Jose"/>
+
+        <Label Grid.Row="4" Grid.Column="1" Text="Llama a Jose si no puedes encontrar tu pedido."
+               TextColor="#525252"/>
+        <!-- Deliver:Call button-->
+        <Button Grid.Row="3" Grid.Column="2" Grid.RowSpan="2"
+                HeightRequest="46"
+                WidthRequest="46"
+                CornerRadius="23"
+                Padding="0"
+                ImageSource="phone"
+                BackgroundColor="#eeeeee"
+                HorizontalOptions="End"
+                VerticalOptions="Center" />
+
+        <!-- Separator lines-->
+        <BoxView Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2"
+                   Margin="0,0,0,0"
+                   HorizontalOptions="FillAndExpand" HeightRequest="2" Color="#e7e7e7"/>
+
+        <BoxView Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3"
+                   VerticalOptions="End"
+                   Margin="0,0,0,10"
+                   HorizontalOptions="FillAndExpand" HeightRequest="2" Color="#e7e7e7"/>
+
+        <!-- Calification Button-->
+        <Button Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="3"
+                   VerticalOptions="End"
+                   HorizontalOptions="FillAndExpand"
+                   Text="Calificar pedido"
+                   FontAttributes="Bold"
+                   FontSize="17"
+                   BackgroundColor="Black"/>
+      
+    </Grid>
+
+</ContentPage>
+
